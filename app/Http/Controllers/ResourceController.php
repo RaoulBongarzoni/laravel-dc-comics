@@ -12,9 +12,9 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        $products = Comic::all();
 
-        return view("comics.home", compact("comics"));
+        return view("fumetti.index", compact('products'));
     }
 
     /**
@@ -39,6 +39,8 @@ class ResourceController extends Controller
     public function show(string $id)
     {
         //
+        $detail = Comic::find($id);
+        return view("fumetti.show", compact('detail'));
     }
 
     /**

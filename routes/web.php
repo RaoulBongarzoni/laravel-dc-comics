@@ -15,8 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $dati = config("data");
-    return view('home', $dati);
+    return redirect()->route('fumetti.index');
 })->name("home");
 
 Route::resource('comics', ResourceController::class);
