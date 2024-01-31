@@ -44,7 +44,8 @@ class ResourceController extends Controller
         $newComic->sale_date = $data['sale_date'];
         $newComic->type = $data['type'];
         $newComic->save();
-        return redirect()->route('fumetti.show', $newComic->id);
+
+        return redirect()->route("comics.show", $newComic->id);
     }
 
     /**

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('fumetti.index');
+    return redirect()->route('comics.index');
 })->name("home");
 
 Route::resource('comics', ResourceController::class);
