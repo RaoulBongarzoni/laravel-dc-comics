@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
-            $table->name("title");
+            $table->char("title", 100);
             $table->longText("description");
             $table->text("thumb");
             $table->string("price");
